@@ -1,31 +1,23 @@
-
+import Image from 'next/image';
 import { Header } from './components/header/header'
 import { Experience } from './components/experience/experience';
+import { Information } from './components/information/information';
+import { EmailIcon } from './components/icons/email-icon';
 import "./styles/home.scss"
+import { SocialBtns } from './components/social-btns/social-btns';
 
 export default function Home() {
   return (
     <main className="container">
       <Header/>
       <Experience/>
-      <div className="infos">
-        <h3>Languages</h3>
-        <div className="languages-info">
-          <span>🇺🇸 EN - Basic</span>
-          <span>🇧🇷 PT-BR - Native Speaker</span>
-        </div>
-        <h3>Education</h3>
-        <div className="educational-info">
-          <span>🎓️</span>
-          <span>Sistemas para internet - Centro Universitario de João Pessoa - Unipê</span>
-        </div>
-        <span></span>
-      </div>
+      <Information/>
       <div className="buttons">
-        <div className="social">
-
-        </div>
-        <button>Contact me</button>
+        <SocialBtns/>
+        <a className='btn-primary' href='mailto:gabrielestevo92@gmail.com'>
+          Contact me
+          <EmailIcon/>
+          </a>
       </div>
       
     </main>
