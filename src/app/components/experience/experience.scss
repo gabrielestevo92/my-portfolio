@@ -5,6 +5,8 @@
     grid-area: experience;
     gap: 24px;
     max-width: 500px;
+    
+    height: 100px;
     p{
         font-weight: 300;
         font-size: 18px;
@@ -12,11 +14,72 @@
         color: var(--text-secondary);
         text-align: center;
     }
+    .experience-time{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        
+    }
+    .experience-language{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+   
+
+
+        img{
+            filter: grayscale(100%);
+        }
+
+        .experience-unit {
+            
+            width: 300px;
+            height: 30px;
+            border-radius: 24px;
+            border: 1px solid var(--text-secondary);
+            
+            justify-content: flex-start;
+            align-items: center;
+            .experience-measure{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 24px;
+                height: 30px;
+                width: 20px;
+                border: 1px linear-gradient(90deg, #777CF4 2.62%, #F47777 93.38%);
+                background: linear-gradient(90deg, #777CF4 2.62%, #F47777 93.38%);
+
+                color: var(--text-primary);
+                font-weight: 300;
+                text-align: center;
+                font-size: 12px;
+                &.measure-m {
+                    width: 10%;
+                }
+                &.measure-1 {
+                    width: 33%;
+                    
+                }
+                &.measure-2 {
+                    width: 66%;
+                }
+                
+            }
+        }
+    }
 
     @media (min-width: 768px){
         align-items: flex-start;
+        
+        gap: 4px;
+        
         p{
-            font-size: 24px;
+            font-size: 1em;
             line-height: 36px;
             text-align: start;
         }
